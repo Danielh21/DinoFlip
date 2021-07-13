@@ -1,6 +1,9 @@
 import React from 'react'
 import { decrement, increment, incrementByAmount } from './counterSlice'
 import { useAppSelector, useAppDispatch } from '../../Hooks/Hooks'
+import {
+    Link
+  } from "react-router-dom";
 
 export function Counter() {
 
@@ -23,6 +26,10 @@ export function Counter() {
         >
           Decrement
         </button>
+
+        <Link to="/game">
+            Go to game!
+        </Link>
       </div>
   )
 }

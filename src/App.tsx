@@ -1,5 +1,13 @@
 import React from 'react';
 import { Counter } from './Features/Counter/counter'
+import { Flipper } from './Features/Flipper/Flipper'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 function App() {
   return (
@@ -7,7 +15,16 @@ function App() {
       <div className="App h-full bg-gray-100">
         <header className="App-header">
         </header>
-        <Counter />
+        <Router>
+          <Switch>
+            <Route path="/game">
+              <Flipper />
+            </Route>
+            <Route path="/">
+              <Counter />
+            </Route>
+          </Switch>
+        </Router>
       </div>
     </div>
   );
