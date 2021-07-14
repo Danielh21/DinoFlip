@@ -1,11 +1,10 @@
 import React from 'react';
-import { Counter } from './Features/Counter/counter'
-import { Flipper } from './Features/Flipper/Flipper'
+import { Flipper } from './Pages/Flipper/Flipper'
+import { Welcome } from './Pages/Welcome'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 
@@ -21,7 +20,7 @@ function App() {
               <Flipper />
             </Route>
             <Route path="/">
-              <Counter />
+              <Welcome />
             </Route>
           </Switch>
         </Router>
