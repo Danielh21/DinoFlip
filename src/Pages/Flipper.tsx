@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAppSelector } from '../../Hooks/Hooks'
+import { useAppSelector } from '../Hooks/Hooks'
 
 export function Flipper() {
 
