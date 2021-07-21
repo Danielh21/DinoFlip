@@ -1,4 +1,7 @@
 {
     "Welcome": "Velkommen",
-    "GoToGame" : "Gå til Spil"
+    "GoToGame" : "Gå til Spil",
+    "EnterName" : "Skriv dit navn",
+    "HereWeGo" : "Vær klar",
+    "YourPoints" : "Dine Points"
 }

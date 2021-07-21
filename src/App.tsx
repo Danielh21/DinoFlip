@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flipper } from './Pages/Flipper'
+import { Game } from './Pages/Game'
 import { Welcome } from './Pages/Welcome'
 import { SetLang } from './Services/Translations'
 import { useAppSelector } from './Hooks/Hooks'
@@ -14,14 +14,14 @@ function App() {
   let lang = useAppSelector( state => state.userSlice.language);
   SetLang(lang);
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full"> 
       <div className="App h-full bg-gray-100">
         <header className="App-header">
         </header>
         <Router>
           <Switch>
             <Route path="/game">
-              <Flipper />
+              <Game />
             </Route>
             <Route path="/">
               <Welcome />
