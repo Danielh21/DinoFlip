@@ -1,9 +1,13 @@
 import React from 'react'
+import { Card } from '../Components/Card'
 import { ScoreBoard } from '../Components/ScoreBoard'
 
 export function Game() {
 
   return (
-    <ScoreBoard />
+    <div>
+      <ScoreBoard />
+      <Card />
+    </div>
   )
 }
