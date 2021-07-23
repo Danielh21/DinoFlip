@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 
 // Define a type for the slice state
-interface UserSlide {
+interface IUserSlice {
   Name: string,
   isSet: boolean,
   points: number,
@@ -10,7 +10,7 @@ interface UserSlide {
 }
 
 // Define the initial state using that type
-const initialState: UserSlide = {
+const initialState: IUserSlice = {
   Name: "null",
   isSet : false,
   points : 0,

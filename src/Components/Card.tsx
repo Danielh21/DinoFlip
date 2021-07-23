@@ -1,7 +1,8 @@
 import React from 'react'
-import { useAppSelector } from '../Hooks/Hooks'
+import { useAppSelector, useAppDispatch } from '../Hooks/Hooks'
 import { translate as t } from '../Services/Translations'
 import { CardContent } from '../Models/CardContent';
+import { cardSelected } from '../Slice/GameSlice';
 
 interface CardProps {
     Content : CardContent
@@ -9,8 +10,11 @@ interface CardProps {
 
 export function Card({Content} : CardProps) {
 
+    const dispatch = useAppDispatch();
+    
     function flipCard(target : HTMLDivElement) {
         target.classList.toggle("hover");
+        dispatch(cardSelected({card : Content}));
     }
 
     let cssCardBackground = Content.cssClass;

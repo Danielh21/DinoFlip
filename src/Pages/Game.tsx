@@ -30,11 +30,9 @@ export function Game() {
       <ScoreBoard />
       <div className="flex flex-row flex-wrap max-w-5xl gap-20 ml-auto mr-auto">
         {
-          Dinosaurs.map( (d => {
-            return (
+          Dinosaurs.map( (d =>
             <Card Content={d} />
-            )
-          }))
+          ))
         }
       </div>
     </div>
