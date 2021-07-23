@@ -6,10 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors : {
-        myBackground : colors.coolGray[500] 
-      },
-    },
+        rexBaground : colors.coolGray[500],
+        camptosaurusBaground : colors.sky[500],
+        stegosaurusBaground: colors.indigo[700]
+      }
   },
+    },
   variants: {
     extend: {},
   },
