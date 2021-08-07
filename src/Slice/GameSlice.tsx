@@ -2,40 +2,49 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { CardContent } from '../Models/CardContent';
 
 interface iFlippedAction {
-  card : CardContent
+  selectedIdentifier: number,
+  index: number | null
 }
 
 
 // Define a type for the slice state
 interface IGameSlice {
-  flipped: boolean,
-  cardFlipped : CardContent | null
+  firstCardFlipped: iFlippedAction | null,
+  secondCardFlipped : iFlippedAction | null,
+  twoCardsFlipped : boolean
 }
 
 // Define the initial state using that type
 const initialState: IGameSlice = {
-  flipped : false,
-  cardFlipped : null
+  firstCardFlipped: null,
+  secondCardFlipped: null,
+  twoCardsFlipped : false
 }
 
 export const GameSlice = createSlice({
   name: 'Game',
   initialState,
   reducers: {
-    cardSelected: (state, action : PayloadAction<iFlippedAction>) => {
-      if(state.flipped) {
-        state.flipped = false;
-        state.cardFlipped = null
+    firstCardSelected: (state, action: PayloadAction<iFlippedAction>) => {
+      state.firstCardFlipped = {
+        selectedIdentifier: action.payload.selectedIdentifier,
+        index: action.payload.index
       }
-      else {
-        state.flipped = true;
-        state.cardFlipped = action.payload.card
+    },
+    secondCardSelected: (state, action: PayloadAction<iFlippedAction>) => {
+      state.secondCardFlipped = {
+        selectedIdentifier: action.payload.selectedIdentifier,
+        index: action.payload.index
       }
+      state.twoCardsFlipped = true
+    },
+    resetState: (state, action : PayloadAction<any>) => {
+      state = initialState
     }
   }
 })
 
 // Action creators are generated for each case reducer function
-export const { cardSelected } = GameSlice.actions
+export const { firstCardSelected, secondCardSelected  } = GameSlice.actions
 
 export default GameSlice.reducer

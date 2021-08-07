@@ -14,8 +14,7 @@ function App() {
   let lang = useAppSelector( state => state.userSlice.language);
   SetLang(lang);
   return (
-    <div className="w-full h-full"> 
-      <div className="App h-full bg-gray-100">
+      <div className="App min-h-screen bg-gray-100">
         <header className="App-header">
         </header>
         <Router>
@@ -29,7 +28,6 @@ function App() {
           </Switch>
         </Router>
       </div>
-    </div>
   );
 }
 

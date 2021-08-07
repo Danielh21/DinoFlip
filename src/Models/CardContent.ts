@@ -1,13 +1,12 @@
 class CardContent {
     name : string
     cssClass : string
-    key : number
+    identifier : number
 
-
-    constructor(name : string, cssClass : string, key : number) {
+    constructor(name : string, cssClass : string, identifier : number) {
         this.name = name
         this.cssClass = cssClass
-        this.key = key
+        this.identifier = identifier
     }
 }
 

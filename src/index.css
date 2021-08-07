@@ -11,7 +11,7 @@
     .flip-container {
         perspective: 1000px;
     }
-    .flip-container.hover .flipper {
+    .flip-container.flipme .flipper {
         transform: rotateY(180deg);
     }
     .card-back {
